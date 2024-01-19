@@ -6,4 +6,5 @@ export interface ONBOARDINGTEMPLATE {
   title: ReactNode;
   description: ReactNode;
   button: ReactNode;
+  mode: 'light' | 'dark';
 }

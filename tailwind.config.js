@@ -14,6 +14,8 @@ module.exports = {
         purpleicon: '#4B5B98',
         danger: '#E16364',
         lineargrad: '#0066FF, #0018F1',
+        indicator: '#41455E',
+        description: '#7E848D',
       },
     },
   },
