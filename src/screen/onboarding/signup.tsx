@@ -1,6 +1,6 @@
 import React from 'react';
-import {Landing} from '../../container';
+import {SignUpContainer} from '../../container';
 
-export default function SignupScreen({navigation, route}: any) {
-  return <Landing navigation={navigation} route={route} />;
+export default function SignupScreen({navigation}: any) {
+  return <SignUpContainer navigation={navigation} />;
 }
