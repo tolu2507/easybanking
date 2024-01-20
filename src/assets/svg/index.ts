@@ -8,6 +8,23 @@ import Eye from './eye.svg';
 import Mail from './mail.svg';
 import Lock from './padlock.svg';
 import Phone from './phonecall.svg';
+import Search from './search.svg';
+import EditPerson from './editperson.svg';
+import Door from './door.svg';
+import Bell from './bell.svg';
+import Plus from './plus.svg';
+import SentDark from './sentdark.svg';
+import SentLight from './sentlight.svg';
+import ReceiveDark from './receivedark.svg';
+import ReceiveLight from './receivelight.svg';
+import TopupDark from './topupdark.svg';
+import TopupLight from './topuplight.svg';
+import LoanLight from './loanlight.svg';
+import LoanDark from './loandark.svg';
+import Home from './home.svg';
+import Statistics from './statisctics.svg';
+import Settings from './settings.svg';
+import Wallet from './wallet.svg';
 
 export {
   Logo,
@@ -20,4 +37,21 @@ export {
   Lock,
   Mail,
   Phone,
+  Plus,
+  Door,
+  Bell,
+  Search,
+  EditPerson,
+  SentDark,
+  SentLight,
+  ReceiveDark,
+  ReceiveLight,
+  TopupDark,
+  TopupLight,
+  LoanDark,
+  LoanLight,
+  Home,
+  Statistics,
+  Settings,
+  Wallet,
 };
