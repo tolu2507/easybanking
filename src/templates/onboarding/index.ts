@@ -1,3 +1,4 @@
 import OnboardingTemplates from './onboarding';
+import LayoutTemplate from './sinin';
 
-export {OnboardingTemplates};
+export {OnboardingTemplates, LayoutTemplate};

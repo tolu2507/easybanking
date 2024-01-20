@@ -12,6 +12,7 @@ import {
   OnboardingTextView,
   OnboardingTitleView,
 } from './styles';
+import {Colors} from '../../constants';
 
 export default function OnboardingTemplates({
   logo,
@@ -21,7 +22,7 @@ export default function OnboardingTemplates({
   button,
   mode,
 }: ONBOARDINGTEMPLATE) {
-  const colors = mode === 'light' ? '#ffffff' : '#161622';
+  const colors = mode === 'light' ? Colors.textwhite : Colors.background;
   return (
     <OnboardingTemplateContainer style={{backgroundColor: colors}}>
       <View>

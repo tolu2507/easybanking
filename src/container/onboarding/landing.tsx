@@ -25,7 +25,14 @@ export default function Landings({navigation}: any) {
     <OnboardingTemplates
       logo={view.logo}
       indicator={<Indicator data={data} items={view} />}
-      title={<OnboardingTitles text={view.title} mode={mode} />}
+      title={
+        <OnboardingTitles
+          text={view.title}
+          mode={mode}
+          size={26}
+          weight={'600'}
+        />
+      }
       description={<OnboardingDescription text={view.description} />}
       button={
         <Button
