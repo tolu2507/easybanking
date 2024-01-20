@@ -15,7 +15,7 @@ export default function Landings({navigation}: any) {
   function clickUp(val: number) {
     if (val >= data.length) {
       console.log('finish, restarting.....', val);
-      return navigation.navigate(Screens.signup);
+      return navigation.navigate(Screens.signin);
     }
     console.log('hiii', val);
     setView(data[val]);
