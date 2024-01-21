@@ -1,3 +1,4 @@
 import TabHeaderComponent from './header';
+import SecondHeaderComponent from './heardetwo';
 
-export {TabHeaderComponent};
+export {TabHeaderComponent, SecondHeaderComponent};

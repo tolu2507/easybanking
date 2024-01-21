@@ -20,7 +20,7 @@ export const StyledTextName = styled(
 );
 export const StyledIcon = styled(
   Pressable,
-  'w-11 h-11 rounded-full bg-linestroke justify-center items-center',
+  'w-11 h-11 rounded-full justify-center items-center',
 );
 export const StyledRelativeView = styled(
   View,

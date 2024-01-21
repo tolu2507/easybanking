@@ -14,6 +14,7 @@ export default function TabHomeComponent({
   topup,
   color,
   data,
+  action,
 }: TABHOME) {
   return (
     <BodyContainer>
@@ -29,7 +30,7 @@ export default function TabHomeComponent({
         loan={loan}
         topup={topup}
       />
-      <TransactionComponent color={color} data={data} />
+      <TransactionComponent color={color} data={data} action={action} />
     </BodyContainer>
   );
 }

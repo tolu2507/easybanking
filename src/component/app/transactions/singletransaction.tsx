@@ -20,6 +20,7 @@ export default function SingleTransaction({
   company,
   logo,
   category,
+  transactionAction,
 }: SINGLE) {
   const mode = useSelector(getLanding);
   let color =
@@ -31,6 +32,7 @@ export default function SingleTransaction({
   let transformedPrice = +price > 0 ? '$ ' + price : `- $ ${price.slice(1)}`;
   return (
     <StyledCardViewTop
+      onPress={transactionAction}
       style={{marginBottom: 22}}
       android_ripple={{color: Colors.background}}>
       <StyledTransactionCard>

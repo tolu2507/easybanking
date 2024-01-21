@@ -36,6 +36,7 @@ export default function HomeContainer() {
           topup={() => handleClicks('topup')}
           color={color}
           data={data}
+          action={() => handleClicks('seen alll don it all !!!!')}
         />
       }
     />

@@ -1,6 +1,6 @@
 import React from 'react';
-import {SettingsContainer} from '../../container';
+import {HomeContainer, SettingsContainer} from '../../container';
 
 export default function SettingsScreen() {
-  return <SettingsContainer />;
+  return <HomeContainer />;
 }

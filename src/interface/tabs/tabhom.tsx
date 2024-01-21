@@ -12,4 +12,5 @@ export interface TABHOME {
   topup: ACTIONS['topup'];
   color: string;
   data: SINGLE[];
+  action: () => void;
 }

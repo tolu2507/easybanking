@@ -1,6 +1,6 @@
 import {ActionComponent} from './action';
 import {Mastercard, SmallCard} from './card';
-import {TabHeaderComponent} from './header';
+import {SecondHeaderComponent, TabHeaderComponent} from './header';
 import {TabHomeComponent} from './home';
 import {
   StyledHeader,
@@ -27,6 +27,7 @@ import {
 import {TransactionComponent} from './transactions';
 
 export {
+  SecondHeaderComponent,
   Mastercard,
   TabHomeComponent,
   TabHeaderComponent,

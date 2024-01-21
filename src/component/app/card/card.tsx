@@ -39,7 +39,7 @@ export default function Mastercard({
         </StyledCardViewTop>
         <StyledCardNumberView>
           {text?.map(item => (
-            <StyledCardNumberText>{item}</StyledCardNumberText>
+            <StyledCardNumberText key={item}>{item}</StyledCardNumberText>
           ))}
         </StyledCardNumberView>
         <StyledCardNumberText style={{fontSize: 13}}>
