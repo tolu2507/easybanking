@@ -69,3 +69,20 @@ export const StyledTransactionCard = styled(
   'flex flex-row items-center space-x-5',
 );
 export const StyledAlternateView = styled(View, 'rounded-full w-5 h-5');
+export const StyledStatisticsCard = styled(View, 'w-full h-[300px] my-8');
+export const StyledStatisticsScrollView = styled(
+  View,
+  'flex flex-row items-center space-x-7',
+);
+export const StyledGraphView = styled(
+  View,
+  'bg-purpleicon/40 flex-1 rounded-3xl',
+);
+export const StyledStatisticsText = styled(
+  Text,
+  'text-[15px] text-textgrey font-[400] leading-[15px]',
+);
+export const StyledStatisticsTextPressed = styled(
+  Pressable,
+  'px-4 py-2 rounded-[8px] flex items-center justify-center flex-row',
+);

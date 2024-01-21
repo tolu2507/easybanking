@@ -1,6 +1,6 @@
 import React from 'react';
-import {HomeContainer, StatisticsContainer} from '../../container';
+import {StatisticsContainer} from '../../container';
 
 export default function StatisticsScreen() {
-  return <HomeContainer />;
+  return <StatisticsContainer />;
 }

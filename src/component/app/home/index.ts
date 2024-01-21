@@ -1,3 +1,4 @@
 import TabHomeComponent from './home';
+import TabStatisticsComponent from './statistics';
 
-export {TabHomeComponent};
+export {TabHomeComponent, TabStatisticsComponent};

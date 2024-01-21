@@ -2,6 +2,7 @@ import {ActionComponent} from './action';
 import {Mastercard, SmallCard} from './card';
 import {SecondHeaderComponent, TabHeaderComponent} from './header';
 import {TabHomeComponent} from './home';
+import {StatisticsBalanceComponent, StatisticsGraph} from './statistics';
 import {
   StyledHeader,
   StyledIcon,
@@ -23,10 +24,17 @@ import {
   StyledTransactionView,
   StyledTransactionCard,
   StyledAlternateView,
+  StyledStatisticsCard,
+  StyledStatisticsScrollView,
+  StyledGraphView,
+  StyledStatisticsText,
+  StyledStatisticsTextPressed,
 } from './style';
 import {TransactionComponent} from './transactions';
 
 export {
+  StatisticsGraph,
+  StatisticsBalanceComponent,
   SecondHeaderComponent,
   Mastercard,
   TabHomeComponent,
@@ -54,4 +62,9 @@ export {
   StyledTransactionView,
   StyledTransactionCard,
   StyledAlternateView,
+  StyledStatisticsCard,
+  StyledStatisticsScrollView,
+  StyledGraphView,
+  StyledStatisticsText,
+  StyledStatisticsTextPressed,
 };
