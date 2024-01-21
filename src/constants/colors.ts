@@ -13,4 +13,5 @@ export const Colors = {
   description: '#7E848D',
   tabbackgrounddark: '#27273A',
   tabbackgroundlight: '#F4F4F4',
+  progress: '#292937',
 };

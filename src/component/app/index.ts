@@ -1,7 +1,11 @@
 import {ActionComponent} from './action';
 import {Mastercard, SmallCard} from './card';
 import {SecondHeaderComponent, TabHeaderComponent} from './header';
-import {TabHomeComponent} from './home';
+import {
+  TabHomeBodyComponent,
+  TabHomeComponent,
+  TabWalletComponent,
+} from './home';
 import {StatisticsBalanceComponent, StatisticsGraph} from './statistics';
 import {
   StyledHeader,
@@ -29,10 +33,18 @@ import {
   StyledGraphView,
   StyledStatisticsText,
   StyledStatisticsTextPressed,
+  StyledSpendingLimitView,
+  StyledSpendingLimitText,
+  StyledSpendingLimit,
+  StyledWalletBodyView,
+  StyledSpendingLimits,
 } from './style';
 import {TransactionComponent} from './transactions';
+import {SpendingLimitView} from './wallet';
 
 export {
+  SpendingLimitView,
+  TabWalletComponent,
   StatisticsGraph,
   StatisticsBalanceComponent,
   SecondHeaderComponent,
@@ -67,4 +79,10 @@ export {
   StyledGraphView,
   StyledStatisticsText,
   StyledStatisticsTextPressed,
+  TabHomeBodyComponent,
+  StyledWalletBodyView,
+  StyledSpendingLimitView,
+  StyledSpendingLimitText,
+  StyledSpendingLimit,
+  StyledSpendingLimits,
 };
