@@ -30,13 +30,15 @@ export default function SingleTransaction({
       ? Colors.textwhite
       : Colors.background;
   let transformedPrice = +price > 0 ? '$ ' + price : `- $ ${price.slice(1)}`;
+  const logoColor =
+    mode === 'dark' ? Colors.iconbackground : Colors.tabbackgroundlight;
   return (
     <StyledCardViewTop
       onPress={transactionAction}
       style={{marginBottom: 22}}
       android_ripple={{color: Colors.background}}>
       <StyledTransactionCard>
-        <StyledIcon>
+        <StyledIcon style={{backgroundColor: logoColor}}>
           {logo ? (
             <StyledImage
               style={{width: 20, height: 20, backgroundColor: color}}
