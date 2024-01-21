@@ -35,7 +35,7 @@ export default function StatisticsGraph({
                   </StyledStatisticsText>
                 </StyledStatisticsTextPressed>
               ) : (
-                <StyledStatisticsText onPress={() => setMonth(item)}>
+                <StyledStatisticsText key={item} onPress={() => setMonth(item)}>
                   {item}
                 </StyledStatisticsText>
               ),

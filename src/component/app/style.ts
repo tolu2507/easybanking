@@ -86,3 +86,31 @@ export const StyledStatisticsTextPressed = styled(
   Pressable,
   'px-4 py-2 rounded-[8px] flex items-center justify-center flex-row',
 );
+export const StyledWalletBodyView = styled(View, 'mt-8 w-full');
+export const StyledSpendingLimit = styled(View, 'my-8 w-full');
+export const StyledSpendingLimitText = styled(
+  Text,
+  'text-lg font-[500] leading-[18px]',
+);
+export const StyledSpendingLimitView = styled(
+  View,
+  'mt-5 w-full h-[115px] rounded-[16px] bg-iconbackground p-6 items-center',
+);
+
+export const StyledSpendingLimits = styled(
+  View,
+  'mt-4 w-full h-2 rounded-[16px] bg-background ',
+);
+export const StyledSettingsView = styled(
+  View,
+  'flex flex-row justify-between items-center py-4 w-full mb-2  border-b-2 border-b-linestroke',
+);
+
+export const StyledSettingsViewEnd = styled(
+  View,
+  'flex flex-row items-center space-x-4',
+);
+export const StyledSpendingLimitTexts = styled(
+  Text,
+  'text-[14px] font-[400] leading-[14px] text-textgrey',
+);

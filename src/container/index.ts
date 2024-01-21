@@ -1,5 +1,6 @@
 import {
   HomeContainer,
+  ProfileContainer,
   SettingsContainer,
   StatisticsContainer,
   WalletContainer,
@@ -16,4 +17,5 @@ export {
   SettingsContainer,
   StatisticsContainer,
   WalletContainer,
+  ProfileContainer,
 };

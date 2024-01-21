@@ -7,6 +7,7 @@ export const data: SINGLE[] = [
     category: 'Entertainment',
     logo: '',
     transactionAction: () => console.log('this can only get better 1'),
+    id: 1,
   },
   {
     price: '300',
@@ -14,6 +15,7 @@ export const data: SINGLE[] = [
     category: 'Transaction',
     logo: '',
     transactionAction: () => console.log('this can only get better 2'),
+    id: 2,
   },
   {
     price: '-12.99',
@@ -21,6 +23,7 @@ export const data: SINGLE[] = [
     category: 'Music',
     logo: '',
     transactionAction: () => console.log('this can only get better 3'),
+    id: 3,
   },
   {
     price: '-88',
@@ -28,6 +31,7 @@ export const data: SINGLE[] = [
     category: 'Shopping',
     logo: '',
     transactionAction: () => console.log('this can only get better 4'),
+    id: 4,
   },
   {
     price: '500',
@@ -35,6 +39,7 @@ export const data: SINGLE[] = [
     category: 'Entertainment',
     logo: '',
     transactionAction: () => console.log('this can only get better 5'),
+    id: 5,
   },
   {
     price: '109.99',
@@ -42,6 +47,7 @@ export const data: SINGLE[] = [
     category: 'Music',
     logo: '',
     transactionAction: () => console.log('this can only get better 6'),
+    id: 6,
   },
   {
     price: '-300',
@@ -49,6 +55,7 @@ export const data: SINGLE[] = [
     category: 'Transaction',
     logo: '',
     transactionAction: () => console.log('this can only get better 7'),
+    id: 7,
   },
   {
     price: '880',
@@ -56,5 +63,6 @@ export const data: SINGLE[] = [
     category: 'Shopping',
     logo: '',
     transactionAction: () => console.log('this can only get better 8'),
+    id: 8,
   },
 ];

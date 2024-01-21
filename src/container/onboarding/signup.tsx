@@ -99,7 +99,6 @@ export default function SignUpContainer({navigation}: any) {
   return (
     <LayoutTemplate
       button={button}
-      arrow={arrow}
       text={
         <TextContainer
           style={{
