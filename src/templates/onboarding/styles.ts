@@ -7,7 +7,7 @@ export const OnboardingTemplateContainer = styled(
 );
 export const SafeAreaViewcontainer = styled(SafeAreaView, 'flex-1');
 
-export const SignTemplateContainer = styled(View, ' w-full p-5');
+export const SignTemplateContainer = styled(View, ' w-full p-5 mt-12');
 export const CenterIcon = styled(Pressable, 'items-center');
 
 export const SignBackContainer = styled(

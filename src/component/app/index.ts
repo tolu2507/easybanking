@@ -6,6 +6,7 @@ import {
   TabHomeComponent,
   TabWalletComponent,
 } from './home';
+import {SingleSettingsComponent} from './settings';
 import {StatisticsBalanceComponent, StatisticsGraph} from './statistics';
 import {
   StyledHeader,
@@ -38,11 +39,15 @@ import {
   StyledSpendingLimit,
   StyledWalletBodyView,
   StyledSpendingLimits,
+  StyledSettingsView,
+  StyledSettingsViewEnd,
+  StyledSpendingLimitTexts,
 } from './style';
 import {TransactionComponent} from './transactions';
 import {SpendingLimitView} from './wallet';
 
 export {
+  SingleSettingsComponent,
   SpendingLimitView,
   TabWalletComponent,
   StatisticsGraph,
@@ -85,4 +90,7 @@ export {
   StyledSpendingLimitText,
   StyledSpendingLimit,
   StyledSpendingLimits,
+  StyledSettingsView,
+  StyledSettingsViewEnd,
+  StyledSpendingLimitTexts,
 };

@@ -4,6 +4,7 @@ import {data} from './home';
 import {landingData} from './landing';
 import {months} from './month';
 import {Screens} from './screen';
+import {settingsData} from './settings';
 import {buttomTab} from './tab';
 
 export {
@@ -15,4 +16,5 @@ export {
   buttomTab,
   data,
   months,
+  settingsData,
 };

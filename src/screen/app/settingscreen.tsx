@@ -1,6 +1,10 @@
 import React from 'react';
-import {HomeContainer, SettingsContainer} from '../../container';
+import {SettingsContainer} from '../../container';
 
-export default function SettingsScreen() {
-  return <HomeContainer />;
+export default function SettingsScreen({
+  navigation,
+}: {
+  navigation: {navigate: (val: string) => any; goBack: () => void};
+}) {
+  return <SettingsContainer navigation={navigation} />;
 }
