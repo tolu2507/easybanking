@@ -1,14 +1,39 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import LandingScreen from '../screen/onboarding/landing';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import {Colors, buttomTab} from '../constants';
+import {useSelector} from 'react-redux';
+import {getLanding} from '../store/features/onboarding/landingSlice';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 export default function TabNavigator() {
+  const mode = useSelector(getLanding);
   return (
-    <Tab.Navigator screenOptions={{headerShown: false}}>
-      <Tab.Screen name="Homes" component={LandingScreen} />
-      <Tab.Screen name="Settings" component={LandingScreen} />
+    <Tab.Navigator
+      activeColor={Colors.blueprimary}
+      inactiveColor={Colors.tabicon}
+      barStyle={{
+        backgroundColor:
+          mode === 'dark'
+            ? Colors.tabbackgrounddark
+            : Colors.tabbackgroundlight,
+        paddingVertical: 4,
+        paddingHorizontal: 4,
+      }}>
+      {buttomTab.map(
+        ({screen, component, options: {labelName, active, inactive}}) => (
+          <Tab.Screen
+            key={screen}
+            name={screen}
+            component={component}
+            options={{
+              tabBarLabel: labelName,
+              tabBarIcon: ({focused}) => (focused ? active : inactive),
+            }}
+          />
+        ),
+      )}
     </Tab.Navigator>
   );
 }

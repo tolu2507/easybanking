@@ -1,5 +1,17 @@
-import LandingScreen from './onboarding/landing';
-import SigninScreen from './onboarding/signin';
-import SignupScreen from './onboarding/signup';
+import {
+  HomeScreen,
+  SettingsScreen,
+  StatisticsScreen,
+  WalletScreen,
+} from './app';
+import {LandingScreen, SigninScreen, SignupScreen} from './onboarding';
 
-export {LandingScreen, SigninScreen, SignupScreen};
+export {
+  HomeScreen,
+  SettingsScreen,
+  StatisticsScreen,
+  WalletScreen,
+  LandingScreen,
+  SigninScreen,
+  SignupScreen,
+};

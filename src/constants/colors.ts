@@ -11,4 +11,6 @@ export const Colors = {
   lineargrad: '#0066FF, #0018F1',
   indicator: '#41455E',
   description: '#7E848D',
+  tabbackgrounddark: '#27273A',
+  tabbackgroundlight: '#F4F4F4',
 };

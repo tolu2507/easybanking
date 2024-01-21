@@ -6,7 +6,7 @@ import {Eye} from '../../assets/svg';
 import {Colors} from '../../constants';
 import {Input, InputBox, InputContainer, InputText} from '.';
 import {useSelector} from 'react-redux';
-import {getOnboarding} from '../../store/features/onboarding/onboardingslice';
+import {getLanding} from '../../store/features/onboarding/landingSlice';
 
 function OnboardInput({
   icon,
@@ -17,7 +17,7 @@ function OnboardInput({
   placeholder,
   securedAction,
 }: INPUTS) {
-  const mode = useSelector(getOnboarding);
+  const mode = useSelector(getLanding);
   return (
     <InputContainer>
       <InputText>{label}</InputText>
