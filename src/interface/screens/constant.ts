@@ -7,7 +7,7 @@ export interface SCREENS {
   statistics: 'statistics';
   settings: 'Settings';
   tab: 'tab';
-  profile: 'profile';
+  profile: 'My Profile';
   edit: 'edit';
   newcard: 'newcard';
   all: 'allcard';
@@ -15,7 +15,10 @@ export interface SCREENS {
   search: 'search';
   send: 'send';
   receive: 'receive';
-  languauge: 'language';
-  change: 'changepassword';
+  languauge: 'Language';
+  change: 'Change Password';
   termsandcondition: 'termsandcondition';
+  contactus: 'Contact Us';
+  privacy: 'Privacy Policy';
+  biometric: 'Biometric';
 }

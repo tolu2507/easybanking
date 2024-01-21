@@ -33,7 +33,7 @@ import Ellipse from './ellipse.svg';
 import Sim from './sim.svg';
 import Wifi from './wifi.svg';
 import Mastercards from './mastercard.svg';
-
+import RightArrow from './rightarrow.svg';
 export {
   Mastercards,
   Wifi,
@@ -70,4 +70,5 @@ export {
   WalletActive,
   Ellipse,
   Sim,
+  RightArrow,
 };
