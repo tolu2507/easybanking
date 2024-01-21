@@ -6,6 +6,7 @@ const onboardingSlice = createSlice({
   reducers: {
     changeState(state, action) {
       state = action.payload;
+      return state;
     },
   },
 });
