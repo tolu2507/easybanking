@@ -4,4 +4,5 @@ export interface SINGLE {
   logo: string;
   category: string;
   transactionAction: () => void;
+  id: number;
 }
