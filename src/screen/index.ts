@@ -1,5 +1,6 @@
 import {
   HomeScreen,
+  ProfileScreen,
   SettingsScreen,
   StatisticsScreen,
   WalletScreen,
@@ -14,4 +15,5 @@ export {
   LandingScreen,
   SigninScreen,
   SignupScreen,
+  ProfileScreen,
 };

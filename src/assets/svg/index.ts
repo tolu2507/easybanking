@@ -33,6 +33,13 @@ import Ellipse from './ellipse.svg';
 import Sim from './sim.svg';
 import Wifi from './wifi.svg';
 import Mastercards from './mastercard.svg';
+import RightArrow from './rightarrow.svg';
+import Setting from './setting.svg';
+import Address from './address.svg';
+import Message from './message.svg';
+import Pay from './pay.svg';
+import Person from './person.svg';
+import Bank from './banks.svg';
 
 export {
   Mastercards,
@@ -70,4 +77,11 @@ export {
   WalletActive,
   Ellipse,
   Sim,
+  RightArrow,
+  Setting,
+  Bank,
+  Pay,
+  Person,
+  Message,
+  Address,
 };

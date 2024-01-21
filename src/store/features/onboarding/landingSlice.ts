@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const landingSlice = createSlice({
   name: 'landing',
-  initialState: 'dark',
+  initialState: 'light',
   reducers: {
     updateState(state, action) {
       state = action.payload;

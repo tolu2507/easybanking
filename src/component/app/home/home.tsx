@@ -1,6 +1,5 @@
 import React from 'react';
-import {BodyContainer} from '../../../templates/features';
-import {ActionComponent, Mastercard, TransactionComponent} from '..';
+import {ActionComponent, TabHomeBodyComponent, TransactionComponent} from '..';
 import {TABHOME} from '../../../interface/tabs/tabhom';
 
 export default function TabHomeComponent({
@@ -17,20 +16,23 @@ export default function TabHomeComponent({
   action,
 }: TABHOME) {
   return (
-    <BodyContainer>
-      <Mastercard
-        cardnumber={cardnumber}
-        date={date}
-        cvvnumber={cvv}
-        holdername={holdername}
-      />
+    <TabHomeBodyComponent
+      cardnumber={cardnumber}
+      date={date}
+      cvv={cvv}
+      holdername={holdername}>
       <ActionComponent
         sent={sent}
         receive={receive}
         loan={loan}
         topup={topup}
       />
-      <TransactionComponent color={color} data={data} action={action} />
-    </BodyContainer>
+      <TransactionComponent
+        color={color}
+        data={data}
+        action={action}
+        headerShown={true}
+      />
+    </TabHomeBodyComponent>
   );
 }

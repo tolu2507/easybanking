@@ -5,7 +5,6 @@ import {
   InputView,
   OnboardingButtonView,
   SafeAreaViewcontainer,
-  SignBackContainer,
   SignTemplateContainer,
   SignTextContainer,
 } from './styles';
@@ -14,7 +13,6 @@ import {Colors} from '../../constants';
 
 export default function LayoutTemplate({
   button,
-  arrow,
   text,
   buttomText,
   input,
@@ -24,7 +22,6 @@ export default function LayoutTemplate({
   return (
     <SafeAreaViewcontainer style={{backgroundColor: colors}}>
       <SignTemplateContainer>
-        <SignBackContainer>{arrow}</SignBackContainer>
         {text ? text : <SignTextContainer />}
         {input ? (
           input

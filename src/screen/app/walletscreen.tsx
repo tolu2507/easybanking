@@ -1,6 +1,6 @@
 import React from 'react';
-import {HomeContainer, WalletContainer} from '../../container';
+import {WalletContainer} from '../../container';
 
 export default function WalletScreen() {
-  return <HomeContainer />;
+  return <WalletContainer />;
 }
