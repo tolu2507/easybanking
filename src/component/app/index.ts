@@ -1,0 +1,56 @@
+import {ActionComponent} from './action';
+import {Mastercard, SmallCard} from './card';
+import {TabHeaderComponent} from './header';
+import {TabHomeComponent} from './home';
+import {
+  StyledHeader,
+  StyledIcon,
+  StyledImage,
+  StyledTextName,
+  StyledTextSmall,
+  StyledTextView,
+  StyledAbsoluteView,
+  StyledImageCard,
+  StyledRelativeView,
+  StyledCardViewTop,
+  StyledCardNumberText,
+  StyledCardNumberView,
+  StyledBottomViewCard,
+  StyledBottomViewCards,
+  StyledSmallcards,
+  StyledMasterLogoView,
+  StyledActionView,
+  StyledTransactionView,
+  StyledTransactionCard,
+  StyledAlternateView,
+} from './style';
+import {TransactionComponent} from './transactions';
+
+export {
+  Mastercard,
+  TabHomeComponent,
+  TabHeaderComponent,
+  TransactionComponent,
+  StyledHeader,
+  StyledImage,
+  StyledTextView,
+  StyledTextName,
+  StyledTextSmall,
+  StyledIcon,
+  StyledAbsoluteView,
+  StyledImageCard,
+  StyledRelativeView,
+  StyledCardViewTop,
+  StyledCardNumberText,
+  StyledCardNumberView,
+  StyledBottomViewCard,
+  StyledBottomViewCards,
+  StyledSmallcards,
+  SmallCard,
+  StyledMasterLogoView,
+  StyledActionView,
+  ActionComponent,
+  StyledTransactionView,
+  StyledTransactionCard,
+  StyledAlternateView,
+};

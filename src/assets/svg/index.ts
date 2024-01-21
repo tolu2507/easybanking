@@ -25,8 +25,18 @@ import Home from './home.svg';
 import Statistics from './statisctics.svg';
 import Settings from './settings.svg';
 import Wallet from './wallet.svg';
+import HomeInactive from './homeinactive.svg';
+import SettingsActive from './settingsactive.svg';
+import StatisticActive from './statiscticsactive.svg';
+import WalletActive from './walletactive.svg';
+import Ellipse from './ellipse.svg';
+import Sim from './sim.svg';
+import Wifi from './wifi.svg';
+import Mastercards from './mastercard.svg';
 
 export {
+  Mastercards,
+  Wifi,
   Logo,
   WelcomeOne,
   WelcomeThree,
@@ -54,4 +64,10 @@ export {
   Statistics,
   Settings,
   Wallet,
+  HomeInactive,
+  SettingsActive,
+  StatisticActive,
+  WalletActive,
+  Ellipse,
+  Sim,
 };
