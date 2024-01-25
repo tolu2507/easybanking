@@ -1,5 +1,5 @@
 import React from 'react';
-import {Lock, Mail, Phone} from '../assets/svg';
+import {Lock, Mail, Person, Phone} from '../assets/svg';
 
 export const signInData = [
   {
@@ -54,5 +54,33 @@ export const signUpData = [
     // value: password,
     // action: (val: string) => dispatch(setPassword(val)),
     securedAction: () => console.log('you made it here!!!!!!!!!!!!!!!!'),
+  },
+];
+
+export const userData = [
+  {
+    label: 'Full Name',
+    icon: <Person width={22} height={22} />,
+    secured: false,
+    placeholder: 'Full Name',
+    // value: email,
+    // action: (val: string) => dispatch(setEmail(val)),
+  },
+
+  {
+    label: 'Email Address',
+    icon: <Mail width={22} height={22} />,
+    secured: false,
+    placeholder: 'Email Address',
+    // value: email,
+    // action: (val: string) => dispatch(setEmail(val)),
+  },
+  {
+    label: 'Phone Number',
+    icon: <Phone width={22} height={22} />,
+    secured: false,
+    placeholder: 'Phone Number',
+    // value: password,
+    // action: (val: string) => dispatch(setPassword(val)),
   },
 ];

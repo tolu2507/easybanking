@@ -27,11 +27,6 @@ export default function SignInContainer({navigation}: any) {
   const {email, password} = useSelector(getInputAuth);
   const text = 'Sign In';
   const buttomText = "I'm a new user.  ";
-  const arrow = (
-    <CenterIcon onPress={() => console.log('pressing you..................')}>
-      <Caretleft />
-    </CenterIcon>
-  );
 
   async function handleSignIn() {
     console.log('starting.....', navigation);
@@ -44,7 +39,6 @@ export default function SignInContainer({navigation}: any) {
         'success',
         'Congratulations on signingg in to the app, enjoy!!!',
       );
-      dispatch(setEmail(''));
       dispatch(setPassword(''));
       return dispatch(changeState(false));
     }
@@ -79,7 +73,6 @@ export default function SignInContainer({navigation}: any) {
   return (
     <LayoutTemplate
       button={button}
-      arrow={arrow}
       text={
         <TextContainer
           style={{

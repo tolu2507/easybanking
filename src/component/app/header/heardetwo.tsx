@@ -26,7 +26,9 @@ export default function SecondHeaderComponent({
           {name}
         </StyledTextName>
       </StyledTextView>
-      <StyledIcon style={{backgroundColor: color}}>{icon}</StyledIcon>
+      <StyledIcon style={{backgroundColor: icon !== undefined ? color : ''}}>
+        {icon}
+      </StyledIcon>
     </StyledHeader>
   );
 }

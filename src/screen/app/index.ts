@@ -1,3 +1,4 @@
+import EditPersonScreen from './editpersonscreen';
 import HomeScreen from './homescreen';
 import ProfileScreen from './profilescreen';
 import SettingsScreen from './settingscreen';
@@ -10,4 +11,5 @@ export {
   WalletScreen,
   StatisticsScreen,
   ProfileScreen,
+  EditPersonScreen,
 };

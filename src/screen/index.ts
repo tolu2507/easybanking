@@ -4,6 +4,7 @@ import {
   SettingsScreen,
   StatisticsScreen,
   WalletScreen,
+  EditPersonScreen,
 } from './app';
 import {LandingScreen, SigninScreen, SignupScreen} from './onboarding';
 
@@ -16,4 +17,5 @@ export {
   SigninScreen,
   SignupScreen,
   ProfileScreen,
+  EditPersonScreen,
 };

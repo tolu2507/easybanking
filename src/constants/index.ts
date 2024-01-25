@@ -1,4 +1,4 @@
-import {signInData, signUpData} from './auth';
+import {signInData, signUpData, userData} from './auth';
 import {Colors} from './colors';
 import {data} from './home';
 import {landingData} from './landing';
@@ -18,4 +18,5 @@ export {
   months,
   settingsData,
   list,
+  userData,
 };

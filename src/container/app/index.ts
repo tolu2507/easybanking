@@ -1,3 +1,4 @@
+import EditPersonContainer from './editpersoncontainer';
 import HomeContainer from './homecontainer';
 import ProfileContainer from './profilecontainer';
 import SettingsContainer from './settingscontainer';
@@ -10,4 +11,5 @@ export {
   SettingsContainer,
   StatisticsContainer,
   ProfileContainer,
+  EditPersonContainer,
 };

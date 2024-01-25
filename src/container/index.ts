@@ -4,6 +4,7 @@ import {
   SettingsContainer,
   StatisticsContainer,
   WalletContainer,
+  EditPersonContainer,
 } from './app';
 import Landing from './onboarding/landing';
 import SignInContainer from './onboarding/signin';
@@ -18,4 +19,5 @@ export {
   StatisticsContainer,
   WalletContainer,
   ProfileContainer,
+  EditPersonContainer,
 };
