@@ -1,5 +1,5 @@
 import React from 'react';
-import {Lock, Mail, Person, Phone} from '../assets/svg';
+import {Lock, Mail, Pay, Person, Phone} from '../assets/svg';
 
 export const signInData = [
   {
@@ -80,6 +80,42 @@ export const userData = [
     icon: <Phone width={22} height={22} />,
     secured: false,
     placeholder: 'Phone Number',
+    // value: password,
+    // action: (val: string) => dispatch(setPassword(val)),
+  },
+];
+
+export const newCardData = [
+  {
+    label: 'Cardholder Name',
+    icon: <Person width={22} height={22} />,
+    secured: false,
+    placeholder: 'Cardholder Name',
+    // value: email,
+    // action: (val: string) => dispatch(setEmail(val)),
+  },
+
+  {
+    label: 'Expiry Date',
+    icon: undefined,
+    secured: false,
+    placeholder: 'Email Address',
+    // value: email,
+    // action: (val: string) => dispatch(setEmail(val)),
+  },
+  {
+    label: 'CVV',
+    icon: undefined,
+    secured: false,
+    placeholder: 'Email Address',
+    // value: email,
+    // action: (val: string) => dispatch(setEmail(val)),
+  },
+  {
+    label: 'Card Number',
+    icon: <Pay width={22} height={22} />,
+    secured: false,
+    placeholder: 'Card Number',
     // value: password,
     // action: (val: string) => dispatch(setPassword(val)),
   },

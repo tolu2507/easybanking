@@ -1,4 +1,5 @@
 import {ActionComponent} from './action';
+import {AllCardComponent} from './allcard';
 import {Mastercard, SmallCard} from './card';
 import {EditPersonComponent} from './editperson';
 import {SecondHeaderComponent, TabHeaderComponent} from './header';
@@ -98,4 +99,5 @@ export {
   StyledSettingsViewEnd,
   StyledSpendingLimitTexts,
   EditPersonComponent,
+  AllCardComponent,
 };

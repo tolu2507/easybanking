@@ -5,6 +5,8 @@ import {
   StatisticsContainer,
   WalletContainer,
   EditPersonContainer,
+  AllCardContainer,
+  NewCardContainer,
 } from './app';
 import Landing from './onboarding/landing';
 import SignInContainer from './onboarding/signin';
@@ -20,4 +22,6 @@ export {
   WalletContainer,
   ProfileContainer,
   EditPersonContainer,
+  AllCardContainer,
+  NewCardContainer,
 };

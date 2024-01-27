@@ -5,6 +5,8 @@ import {
   StatisticsScreen,
   WalletScreen,
   EditPersonScreen,
+  AllCardScreen,
+  NewCardScreen,
 } from './app';
 import {LandingScreen, SigninScreen, SignupScreen} from './onboarding';
 
@@ -18,4 +20,6 @@ export {
   SignupScreen,
   ProfileScreen,
   EditPersonScreen,
+  AllCardScreen,
+  NewCardScreen,
 };
