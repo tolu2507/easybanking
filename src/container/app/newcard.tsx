@@ -1,14 +1,9 @@
 import React from 'react';
 import {TabTemplates} from '../../templates';
-import {
-  AllCardComponent,
-  SecondHeaderComponent,
-  TabHomeBodyComponent,
-} from '../../component/app';
+import {SecondHeaderComponent, TabHomeBodyComponent} from '../../component/app';
 import {Caretleft} from '../../assets/svg';
 import {useDispatch, useSelector} from 'react-redux';
-import {getLanding} from '../../store/features/onboarding/landingSlice';
-import {Colors, Screens, newCardData, userData} from '../../constants';
+import {newCardData} from '../../constants';
 import {OnboardInput} from '../../component/inputs';
 import {
   getCardData,

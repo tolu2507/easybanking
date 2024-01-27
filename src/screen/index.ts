@@ -7,6 +7,10 @@ import {
   EditPersonScreen,
   AllCardScreen,
   NewCardScreen,
+  TransactionScreen,
+  ReceiveScreen,
+  SearchScreen,
+  SendScreen,
 } from './app';
 import {LandingScreen, SigninScreen, SignupScreen} from './onboarding';
 
@@ -22,4 +26,8 @@ export {
   EditPersonScreen,
   AllCardScreen,
   NewCardScreen,
+  TransactionScreen,
+  ReceiveScreen,
+  SearchScreen,
+  SendScreen,
 };

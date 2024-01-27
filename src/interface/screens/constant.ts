@@ -21,4 +21,5 @@ export interface SCREENS {
   contactus: 'Contact Us';
   privacy: 'Privacy Policy';
   biometric: 'Biometric';
+  transactions: 'transactions';
 }
