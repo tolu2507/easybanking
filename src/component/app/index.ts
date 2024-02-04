@@ -4,6 +4,7 @@ import {Mastercard, SmallCard} from './card';
 import {EditPersonComponent} from './editperson';
 import {SecondHeaderComponent, TabHeaderComponent} from './header';
 import {
+  LoadingComponent,
   TabHomeBodyComponent,
   TabHomeComponent,
   TabWalletComponent,
@@ -100,4 +101,5 @@ export {
   StyledSpendingLimitTexts,
   EditPersonComponent,
   AllCardComponent,
+  LoadingComponent,
 };

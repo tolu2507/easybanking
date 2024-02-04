@@ -5,6 +5,8 @@ import {Search} from '../../assets/svg';
 import {useSelector} from 'react-redux';
 import {getLanding} from '../../store/features/onboarding/landingSlice';
 import {Colors, Screens, data} from '../../constants';
+import {getOnboarding} from '../../store/features/onboarding/onboardingslice';
+import {ONBOARD} from '../../interface/onboarding';
 
 export default function HomeContainer({
   navigation,
@@ -15,8 +17,10 @@ export default function HomeContainer({
   };
 }) {
   const mode = useSelector(getLanding);
+  const profile: ONBOARD = useSelector(getOnboarding);
   let color = mode === 'dark' ? Colors.textwhite : Colors.iconbackground;
   const url =
+    profile.photoURL ??
     'https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg';
   function handleClicks(val: string) {
     console.log('this is fun from, ', val);
@@ -46,7 +50,7 @@ export default function HomeContainer({
         <TabHeaderComponent
           icon={<Search onPress={() => handleClicks(Screens.search)} />}
           image={url}
-          name={'Tanya Myroniuk'}
+          name={profile.displayName ?? 'Enter a Name'}
         />
       }
       body={
