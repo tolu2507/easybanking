@@ -1,18 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TabTemplates} from '../../templates';
-import {SecondHeaderComponent, TabHomeBodyComponent} from '../../component/app';
+import {
+  LoadingComponent,
+  SecondHeaderComponent,
+  TabHomeBodyComponent,
+} from '../../component/app';
 import {Caretleft} from '../../assets/svg';
 import {useDispatch, useSelector} from 'react-redux';
-import {newCardData} from '../../constants';
+import {Colors, Screens, newCardData} from '../../constants';
 import {OnboardInput} from '../../component/inputs';
+import {INPUTS} from '../../interface/inputs/onboardingInput';
 import {
   getCardData,
   setCardNumber,
   setCardholder,
   setCvv,
   setDate,
-} from '../../store/features/app/cards';
-import {INPUTS} from '../../interface/inputs/onboardingInput';
+} from '../../store/features/app/card';
+import {Button} from '../../component/buttons';
+import {cardsCollection} from '../../utils/firestore';
 
 export default function NewCardContainer({
   navigation,
@@ -25,6 +31,7 @@ export default function NewCardContainer({
   const screen = 'Add New Card';
   const dispatch = useDispatch();
   const {cardholder, cvv, cardnumber, date} = useSelector(getCardData);
+  const [loading, setLoading] = useState(false);
 
   const inputs: INPUTS[] = newCardData.map(item => {
     if (item.label === 'Cardholder Name') {
@@ -58,7 +65,20 @@ export default function NewCardContainer({
     }
   });
 
-  return (
+  async function handleClick() {
+    setLoading(!loading);
+    let res = await cardsCollection.add({cardholder, date, cvv, cardnumber});
+
+    if (res) {
+      console.log('values of res==>', res);
+      setLoading(false);
+      return navigation.navigate(Screens.home);
+    }
+  }
+
+  const response = loading ? (
+    <LoadingComponent />
+  ) : (
     <TabTemplates
       head={
         <SecondHeaderComponent
@@ -74,8 +94,16 @@ export default function NewCardContainer({
           cvv={cvv}
           holdername={cardholder}>
           <OnboardInput data={inputs} />
+          <Button
+            buttonText={'Add Card'}
+            onClick={() => handleClick()}
+            backgroundColor={Colors.blueprimary}
+            textColor={'#fff'}
+          />
         </TabHomeBodyComponent>
       }
     />
   );
+
+  return response;
 }

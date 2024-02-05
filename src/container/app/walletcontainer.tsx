@@ -6,6 +6,8 @@ import {getLanding} from '../../store/features/onboarding/landingSlice';
 import {Colors, Screens, data} from '../../constants';
 import {Caretleft, Plus} from '../../assets/svg';
 import {useSharedValue} from 'react-native-reanimated';
+import {getCardData} from '../../store/features/app/card';
+import {CARDS} from '../../store/features/app/cards';
 
 export default function WalletContainer({
   navigation,
@@ -16,6 +18,7 @@ export default function WalletContainer({
   };
 }) {
   const mode = useSelector(getLanding);
+  const card: CARDS = useSelector(getCardData);
   let color = mode === 'dark' ? Colors.textwhite : Colors.iconbackground;
   const screen = 'MyCards';
   function handleClicks(val: string) {
@@ -31,7 +34,7 @@ export default function WalletContainer({
   const min = useSharedValue(0);
   const max = useSharedValue(100);
   const [val, setVal] = useState(0);
-
+  console.log(val);
   return (
     <TabTemplates
       head={
@@ -43,10 +46,10 @@ export default function WalletContainer({
       }
       body={
         <TabWalletComponent
-          cardnumber={'4562112245957852'}
-          date={'24/2000'}
-          cvv={'6986'}
-          holdername={'AR Jonson'}
+          cardnumber={card?.cardnumber}
+          date={card.date}
+          cvv={card.cvv}
+          holdername={card.cardholder}
           color={color}
           data={datas}
           action={() => handleClicks('seen alll don it all !!!!')}
