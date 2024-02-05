@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252872326115",
+    "project_id": "mobile-4d071",
+    "storage_bucket": "mobile-4d071.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252872326115:android:b355aa81b6831c30e47ed6",
+        "android_client_info": {
+          "package_name": "com.easybanking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrbRxKtP7YYIQlDhRvZ7UolFtUafJ4NYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

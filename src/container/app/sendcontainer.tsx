@@ -1,13 +1,13 @@
 import React from 'react';
 import {TabTemplates} from '../../templates';
-import {AllCardComponent, SecondHeaderComponent} from '../../component/app';
+import {SecondHeaderComponent, TransactionComponent} from '../../component/app';
 import {Caretleft} from '../../assets/svg';
 import {useSelector} from 'react-redux';
+import {Colors, data} from '../../constants';
 import {getLanding} from '../../store/features/onboarding/landingSlice';
-import {Colors, Screens} from '../../constants';
-import {CARDS, getCardDatas} from '../../store/features/app/cards';
+import {View} from 'react-native';
 
-export default function AllCardContainer({
+export default function SendContainer({
   navigation,
 }: {
   navigation: {
@@ -15,12 +15,9 @@ export default function AllCardContainer({
     goBack: () => void;
   };
 }) {
+  const screen = 'Send Money';
   const mode = useSelector(getLanding);
   let color = mode === 'dark' ? Colors.textwhite : Colors.iconbackground;
-  const screen = 'All Cards';
-
-  const data: CARDS[] = useSelector(getCardDatas);
-
   return (
     <TabTemplates
       head={
@@ -31,11 +28,15 @@ export default function AllCardContainer({
         />
       }
       body={
-        <AllCardComponent
-          data={data}
-          action={() => navigation.navigate(Screens.newcard)}
-          color={color}
-        />
+        <View>
+          {/* <InputContainer /> */}
+          <TransactionComponent
+            color={color}
+            data={data}
+            action={() => console.log('non existence')}
+            headerShown={false}
+          />
+        </View>
       }
     />
   );

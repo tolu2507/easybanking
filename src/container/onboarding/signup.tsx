@@ -1,7 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {Caretleft} from '../../assets/svg';
-import {CenterIcon} from '../../templates/onboarding/styles';
+import React, {useState} from 'react';
 import {Button} from '../../component/buttons';
 import {Colors, Screens, signUpData} from '../../constants';
 import {useDispatch, useSelector} from 'react-redux';
@@ -21,6 +19,9 @@ import {
   setPassword,
 } from '../../store/features/onboarding/authSlice';
 import {LayoutTemplate} from '../../templates/onboarding';
+import {authenthecation} from '../../service';
+import {LoadingComponent} from '../../component/app';
+import encryptedDetails from '../../utils/storage';
 
 export default function SignUpContainer({navigation}: any) {
   const mode = useSelector(getLanding);
@@ -28,24 +29,35 @@ export default function SignUpContainer({navigation}: any) {
   const {email, password, name, number} = useSelector(getInputAuth);
   const text = 'Sign Up';
   const buttomText = 'Already have an account. ';
-  const arrow = (
-    <CenterIcon onPress={() => console.log('pressing you..................')}>
-      <Caretleft />
-    </CenterIcon>
-  );
+  const [loading, setLoading] = useState(false);
 
   async function handleSignUp() {
     console.log('starting.....', navigation);
+    setLoading(!loading);
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const emailResult = emailRegex.test(email);
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
     const passwordResult = passwordRegex.test(password);
     if (emailResult && passwordResult) {
-      Alert.alert(
-        'success',
-        'Congratulations on signing up to the app, enjoy!!!',
-      );
-      return navigation.navigate(Screens.signin);
+      await authenthecation.signUp(email, password).then(async res => {
+        if (res) {
+          Alert.alert(
+            'success',
+            'Congratulations on signing up to the app, enjoy!!!',
+          );
+          await authenthecation
+            .updateInfo({
+              displayName: name,
+              photoUrl:
+                'https://cdn.pixabay.com/photo/2016/10/25/22/22/roses-1770165_1280.png',
+            })
+            .then(async ress => {
+              console.log('the value of res', ress);
+              setLoading(!loading);
+              return navigation.navigate(Screens.signin);
+            });
+        }
+      });
     }
   }
   const button = (
@@ -96,7 +108,9 @@ export default function SignUpContainer({navigation}: any) {
     }
   });
 
-  return (
+  let response = loading ? (
+    <LoadingComponent />
+  ) : (
     <LayoutTemplate
       button={button}
       text={
@@ -119,4 +133,6 @@ export default function SignUpContainer({navigation}: any) {
       mode={mode}
     />
   );
+
+  return response;
 }

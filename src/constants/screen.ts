@@ -23,4 +23,5 @@ export const Screens: SCREENS = {
   contactus: 'Contact Us',
   privacy: 'Privacy Policy',
   biometric: 'Biometric',
+  transactions: 'transactions',
 };

@@ -40,6 +40,7 @@ import Message from './message.svg';
 import Pay from './pay.svg';
 import Person from './person.svg';
 import Bank from './banks.svg';
+import X from './x.svg';
 
 export {
   Mastercards,
@@ -84,4 +85,5 @@ export {
   Person,
   Message,
   Address,
+  X,
 };

@@ -1,5 +1,5 @@
 export function formatNumberGroups(input: string) {
-  const numericString = input.replace(/\D/g, '');
+  const numericString = input?.replace(/\D/g, '');
   if (/^\d{16}$/.test(numericString)) {
     const formattedArray = numericString.match(/.{1,4}/g);
 
