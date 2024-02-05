@@ -7,6 +7,10 @@ import {
   EditPersonContainer,
   AllCardContainer,
   NewCardContainer,
+  TransactionContainer,
+  SearchContainer,
+  SendContainer,
+  ReceiveContainer,
 } from './app';
 import Landing from './onboarding/landing';
 import SignInContainer from './onboarding/signin';
@@ -24,4 +28,8 @@ export {
   EditPersonContainer,
   AllCardContainer,
   NewCardContainer,
+  TransactionContainer,
+  SearchContainer,
+  SendContainer,
+  ReceiveContainer,
 };

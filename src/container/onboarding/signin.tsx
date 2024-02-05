@@ -1,7 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {Caretleft} from '../../assets/svg';
-import {CenterIcon} from '../../templates/onboarding/styles';
+import React, {useState} from 'react';
 import {Button} from '../../component/buttons';
 import {Colors, signInData} from '../../constants';
 import {useDispatch, useSelector} from 'react-redux';
@@ -20,6 +18,10 @@ import {
 } from '../../store/features/onboarding/authSlice';
 import {changeState} from '../../store/features/onboarding/onboardingslice';
 import {LayoutTemplate} from '../../templates/onboarding';
+import {authenthecation} from '../../service';
+import {ONBOARD} from '../../interface/onboarding';
+import {LoadingComponent} from '../../component/app';
+import encryptedDetails from '../../utils/storage';
 
 export default function SignInContainer({navigation}: any) {
   const mode = useSelector(getLanding);
@@ -27,20 +29,40 @@ export default function SignInContainer({navigation}: any) {
   const {email, password} = useSelector(getInputAuth);
   const text = 'Sign In';
   const buttomText = "I'm a new user.  ";
+  const [loading, setLoading] = useState(false);
 
   async function handleSignIn() {
     console.log('starting.....', navigation);
+    setLoading(!loading);
+    let profile = await encryptedDetails.getSingleItem('profile');
+    console.log('profile values is this =>> ', profile);
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const emailResult = emailRegex.test(email);
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
     const passwordResult = passwordRegex.test(password);
     if (emailResult && passwordResult) {
-      Alert.alert(
-        'success',
-        'Congratulations on signingg in to the app, enjoy!!!',
-      );
-      dispatch(setPassword(''));
-      return dispatch(changeState(false));
+      await authenthecation.signIn(email, password).then(async res => {
+        if (res) {
+          Alert.alert(
+            'success',
+            'Congratulations on signingg in to the app, enjoy!!!',
+          );
+          dispatch(setPassword(''));
+          let details: ONBOARD = {
+            displayName: res.displayName,
+            email: res.email,
+            emailVerified: res.emailVerified,
+            phoneNumber: res.phoneNumber,
+            photoURL: res.photoURL,
+            providerId: res.providerId,
+            tenantId: res.isAnonymous,
+            uid: res.uid,
+          };
+          setLoading(!loading);
+          await encryptedDetails.setItems('profile', JSON.stringify(res));
+          return dispatch(changeState(details));
+        }
+      });
     }
   }
   const button = (
@@ -70,7 +92,9 @@ export default function SignInContainer({navigation}: any) {
     }
   });
 
-  return (
+  let response = loading ? (
+    <LoadingComponent />
+  ) : (
     <LayoutTemplate
       button={button}
       text={
@@ -93,4 +117,6 @@ export default function SignInContainer({navigation}: any) {
       mode={mode}
     />
   );
+
+  return response;
 }
