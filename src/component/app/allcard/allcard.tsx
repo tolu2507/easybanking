@@ -6,25 +6,21 @@ import {Button} from '../../buttons';
 import {Colors} from '../../../constants';
 import {View} from 'react-native';
 import {StyledView} from '../../onboarding/style';
+import {CARDS} from '../../../store/features/app/cards';
 
 export default function AllCardComponent({
   data,
   action,
   color,
 }: {
-  data: {
-    cardnumber: string;
-    date: string;
-    cvv: string;
-    holdername: string;
-  }[];
+  data: CARDS[];
   action: () => void;
   color: string;
 }) {
   return (
     <BodyContainer className=" relative">
-      {data.map(({cardnumber, date, cvv, holdername}) => (
-        <View style={{marginBottom: 30}}>
+      {data.map(({cardnumber, date, cvv, cardholder: holdername}) => (
+        <View key={cardnumber} style={{marginBottom: 30}}>
           <Mastercard
             key={cardnumber}
             cardnumber={cardnumber}

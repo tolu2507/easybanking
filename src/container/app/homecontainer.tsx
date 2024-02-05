@@ -1,12 +1,22 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect} from 'react';
 import {TabTemplates} from '../../templates';
 import {TabHeaderComponent, TabHomeComponent} from '../../component/app';
 import {Search} from '../../assets/svg';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {getLanding} from '../../store/features/onboarding/landingSlice';
 import {Colors, Screens, data} from '../../constants';
 import {getOnboarding} from '../../store/features/onboarding/onboardingslice';
 import {ONBOARD} from '../../interface/onboarding';
+import {CARDS, setCards} from '../../store/features/app/cards';
+import {cardsCollection} from '../../utils/firestore';
+import {
+  getCardData,
+  setCardNumber,
+  setCardholder,
+  setCvv,
+  setDate,
+} from '../../store/features/app/card';
 
 export default function HomeContainer({
   navigation,
@@ -18,6 +28,8 @@ export default function HomeContainer({
 }) {
   const mode = useSelector(getLanding);
   const profile: ONBOARD = useSelector(getOnboarding);
+  const dispatch = useDispatch();
+  const card: CARDS = useSelector(getCardData);
   let color = mode === 'dark' ? Colors.textwhite : Colors.iconbackground;
   const url =
     profile.photoURL ??
@@ -44,6 +56,22 @@ export default function HomeContainer({
     // }
   }
 
+  useEffect(() => {
+    return cardsCollection.onSnapshot(querySnapshot => {
+      const list: CARDS[] = [];
+      querySnapshot.forEach(doc => {
+        const {cardholder, date, cvv, cardnumber} = doc.data();
+        list.push({id: doc.id, cardholder, date, cvv, cardnumber});
+      });
+      dispatch(setCards(list));
+      let cardss = list[0];
+      dispatch(setCardholder(cardss?.cardholder));
+      dispatch(setCardNumber(cardss?.cardnumber));
+      dispatch(setDate(cardss?.date));
+      dispatch(setCvv(cardss?.cvv));
+    });
+  }, []);
+
   return (
     <TabTemplates
       head={
@@ -55,10 +83,10 @@ export default function HomeContainer({
       }
       body={
         <TabHomeComponent
-          cardnumber={'4562112245957852'}
-          date={'24/2000'}
-          cvv={'6986'}
-          holdername={'AR Jonson'}
+          cardnumber={card?.cardnumber}
+          date={card?.date}
+          cvv={card?.cvv}
+          holdername={card?.cardholder}
           sent={() => handleClicks('sent')}
           receive={() => handleClicks('receive')}
           loan={() => handleClicks('loan')}

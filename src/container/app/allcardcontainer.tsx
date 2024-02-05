@@ -5,6 +5,7 @@ import {Caretleft} from '../../assets/svg';
 import {useSelector} from 'react-redux';
 import {getLanding} from '../../store/features/onboarding/landingSlice';
 import {Colors, Screens} from '../../constants';
+import {CARDS, getCardDatas} from '../../store/features/app/cards';
 
 export default function AllCardContainer({
   navigation,
@@ -18,20 +19,7 @@ export default function AllCardContainer({
   let color = mode === 'dark' ? Colors.textwhite : Colors.iconbackground;
   const screen = 'All Cards';
 
-  const data = [
-    {
-      cardnumber: '0897654321234567',
-      date: '24/2000',
-      cvv: '6465',
-      holdername: 'AR Jonson',
-    },
-    {
-      cardnumber: '0897654321234566',
-      date: '24/2001',
-      cvv: '6465',
-      holdername: 'AR Jonsons',
-    },
-  ];
+  const data: CARDS[] = useSelector(getCardDatas);
 
   return (
     <TabTemplates
